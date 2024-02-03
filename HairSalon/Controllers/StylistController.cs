@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace HairSalon.Controllers
 {
@@ -35,7 +36,7 @@ namespace HairSalon.Controllers
 
     public ActionResult Details(int id)
     {
-      Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      Stylist thisStylist = _db.Stylists.Include(stylist => stylist.Clients).FirstOrDefault(stylist => stylist.StylistId == id);
       return View(thisStylist);
     }
 
