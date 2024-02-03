@@ -28,7 +28,7 @@ Program that asks users to add stylists, and within specific stylists, allow for
 * In the workbench, navigate to *Navigation > Administration* and *Data Import/Restore*
 * Under *Import options* choose *Import from Self-Contained File*
 * Choose the file attached to this repository
-* Under *Default Schema tobe Imported To* click *New* and input the database name and **_test**
+* Under *Default Schema to be Imported To* click *New* and input the database name and **_test**
 * Under *Import Progress* click *Start Import* to import database
 * Open a code editor such as VScode and in the terminal **git clone** the project for editing capabilities
 * Install dependencies for local project under the Bakery folder using command **dotnet restore**
